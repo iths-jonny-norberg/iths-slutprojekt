@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9a2;
+  
+}
+
+.flex {
+  margin: auto;
+  
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  
+ }
+
+
+div {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+   
+    color: black;
+}
+
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+  
+    color: yellow;
+    }
+
+
+
+    p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+  
+    color: white;
+    }
+
+
+      .broedtext2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: center;
+  	width: 100%;
+    color: black;
+    margin-bottom: 20px;	
+    
+    }
+
+
+
+    #About {
+    
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    margin: auto;
+    text-transform: le
+    }
+
+
+     .textareaAbout {
+    
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    margin: auto;
+    width: 60%;
+   
+    }
+
+
+
+    #Contact {
+    
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    margin: auto;
+    text-transform: le
+    }
+
+
+
+
+img { 
+ width: 100%;
+  
+}
+
+.logo { 
+ width: auto;
+ justify-content: center;
+ align-content: center;
+ display: flex;
+ margin-bottom: 10px;
+  
+}
+
+
+@media(max-width: 650px ) {
+ 
+ .flex
+	 {
+ 
+  	display: block;
+	}
+  
+}
+
+
+
+/*Menu */
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#page-nav {
+  width: 100%;
+  background: none;
+
+  /* If you want the navigation bar to stick on top
+  position: sticky;
+  top: 0;
+  */
+}
+
+/* Hide Hamburger */
+#page-nav label, #hamburger {
+  display: none;
+  justify-content: left;
+  align-content: left;
+  background: none;
+}
+
+/* Menu Items */
+#page-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+  color: black;
+}
+#page-nav ul li {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+}
+#page-nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 1768px){
+  /* Show Hamburger */
+  #page-nav label {
+    display: inline-block;
+    justify-content: left;
+    align-content: left;
+   
+    background; none;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    color: black;
+  }
+
+  /* Break down menu items into vertical */
+  #page-nav ul li {
+    display: inline;
+    color: black;
+  }
+  #page-nav ul li {
+  	color: black;
+   opacity: 10%;
+  }
+
+  /* Toggle show/hide menu on checkbox click */
+  #page-nav ul {
+    display: none;
+    color: black;
+  }
+  #page-nav input:checked ~ ul {
+    display: block;
+    color: black;
+  }
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+  
+
+
+
+
+/* Fade funktion*/
+
+
+.contentFade {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contentFade .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.contentFade:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.contentFade:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+
+
+
+
+/* contact */
+
+.containerContact {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 50px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #999971;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #666648;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+
+.topBtn a{ 
+ width: auto;
+ justify-content: center;
+ align-content: center;
+ display: flex;
+ margin-bottom: 10px;
+ color: black;
+  
+}
